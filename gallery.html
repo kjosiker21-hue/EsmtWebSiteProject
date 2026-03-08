@@ -51,9 +51,8 @@
     <main class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-20 -mt-20">
         
         <div class="flex flex-wrap justify-center gap-4 mb-12" id="filter-container">
-            <button class="filter-btn active px-8 py-2.5 rounded-full border border-volt text-volt shadow-[0_0_15px_rgba(162,255,0,0.4)] font-bold text-sm uppercase tracking-widest transition-all duration-300" data-filter="all">TOUT</button>
             <button class="filter-btn px-8 py-2.5 rounded-full border border-white/10 text-gray-400 hover:border-volt hover:text-volt hover:shadow-[0_0_15px_rgba(162,255,0,0.2)] font-bold text-sm uppercase tracking-widest transition-all duration-300" data-filter="photo">PHOTOS</button>
-            <button class="filter-btn px-8 py-2.5 rounded-full border border-white/10 text-gray-400 hover:border-volt hover:text-volt hover:shadow-[0_0_15px_rgba(162,255,0,0.2)] font-bold text-sm uppercase tracking-widest transition-all duration-300" data-filter="video">VIDÉOS</button>
+    
         </div>
 
         <div class="masonry-grid" id="gallery-grid">
@@ -62,15 +61,7 @@
                 <img src="./assets/images/30b3f7a3886dd3b7487961270a55ca3f.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
 
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/RIDICULOUS doubles rally! 😱 - Australian Open (720p, h264).mp4', true)">
-                <img src="./assets/images/Screenshot 2026-03-07 225239.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
-
+            
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/01b1e529f8ab120194ee936505185112.jpg')">
                 <img src="./assets/images/01b1e529f8ab120194ee936505185112.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
@@ -78,122 +69,47 @@
              <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/05f07d6d6ae8c9407e1c2157e7b0f910.jpg')">
                 <img src="./assets/images/05f07d6d6ae8c9407e1c2157e7b0f910.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/Top 5 ATP Shots Of 2025 So Far...🔥 - Tennis TV (360p, h264).mp4', true)">
-                <img src="./assets/images/Screenshot 2026-03-06 235840.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
+            
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/035561c73278befb9b172e8acc0a71a6.jpg')">
                 <img src="./assets/images/035561c73278befb9b172e8acc0a71a6.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/EPIC CLAY COURT POINT NADAL VS DJOKOVIC #tennis #shorts - TennisAcademy101 (720p, h264).mp4', true)">
-                <img src="./assets/images/Screenshot 2026-03-07 230338.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
+            
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/80781f762d6e4640b359b2e315885e87.jpg')">
-                <img src=
-                "./assets/images/80781f762d6e4640b359b2e315885e87.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+                <img src="./assets/images/80781f762d6e4640b359b2e315885e87.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
             
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/2e9e5e15a13e8b5288c9f08a0deabf80.jpg')">
                 <img src="./assets/images/2e9e5e15a13e8b5288c9f08a0deabf80.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/Roger Federer's PERFECT point! 🔥 - Australian Open (720p, h264).mp4', true)">
-                <img src="./assets/images/Screenshot 2026-03-06 235739.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
+            
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/2d43f1e714842498935cf833519ca186.jpg')">
                 <img src="./assets/images/2d43f1e714842498935cf833519ca186.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/307bba08a62aaad027acd034325d8d82.jpg')">
                 <img src="./assets/images/307bba08a62aaad027acd034325d8d82.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/Novak Djokovic at his BEST! 🤩 - Australian Open (720p, h264).mp4', true)">
-                <img src="./assets/images/Screenshot 2026-03-07 231251.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
+            
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/0e7c12125308d0da0c380e014110a2c9.jpg')">
                 <img src="./assets/images/0e7c12125308d0da0c380e014110a2c9.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/f_20250903_USO_GE301874_a.webp')">
                 <img src="./assets/images/f_20250903_USO_GE301874_a.webp" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/Serena Williams' Incredible Mixed Doubles Shots - Wimbledon (720p, h264).mp4', true)">
-                <img src="./assets/images/Screenshot 2026-03-07 231159.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
+            
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/a503a768a332b484ad8c7fbb1e90afd5.jpg')">
                 <img src="./assets/images/a503a768a332b484ad8c7fbb1e90afd5.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/Tennis Doubles MADNESS! - Tennis TV (720p, h264).mp4', true)">
-                <img src="./assets/images/Screenshot 2026-03-07 232326.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
+            
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/f35f3d433054b11ad97e950e0b2c6d0b.jpg')">
                 <img src="./assets/images/f35f3d433054b11ad97e950e0b2c6d0b.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/Doubles at its BEST! 🙌 - Australian Open (1080p, h264).mp4', true)">
-                <img src="./assets/images/ab0dc6f7b8b10c3b095883589cbbab4a.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
+           
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/a8b46b8bdf132bbcc61c585ea3eddaec.jpg')">
                 <img src="./assets/images/a8b46b8bdf132bbcc61c585ea3eddaec.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/EPIC Djokovic Set Point 🤯 - Tennis TV (1080p, h264).mp4', true)">
-                <img src="./assets/images/novak-djokovic-steht-zum-13.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
             
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/Raducanu STUNNED by Alcaraz’s shot! 😱 - US Open Tennis Championships (720p, h264).mp4', true)">
-                <img src="./assets/images/Screenshot 2026-03-07 225329.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/4ea2125bd5fe318d3d49020ebe4ffc49.jpg')">
-                <img src="./assets/images/4ea2125bd5fe318d3d49020ebe4ffc49.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
-            </div>
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/Top 5 INSANE Alcaraz vs Sinner Rallies! 😱 - Tennis TV (720p, h264).mp4', true)">
-                <img src="./assets/images/Screenshot 2026-03-07 234146.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
+            
+            
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/3370b16ef58dcda7a643ff681e8c34d7.jpg')">
                 <img src="./assets/images/3370b16ef58dcda7a643ff681e8c34d7.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
@@ -203,26 +119,12 @@
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/6661064605cc31fc19df07c909f76904.jpg')">
                 <img src="./assets/images/6661064605cc31fc19df07c909f76904.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/Venus SMASHES cross-court winner past Serena! 💪 - Australian Open (720p, h264).mp4', true)">
-                <img src="./assets/images/80781f762d6e4640b359b2e315885e87.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
+            
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/1742767759_Novak-Djokovic-bat-le-record-de-Rafael-Nadal-pour-la-scaled.jpg')">
                 <img src="./assets/images/1742767759_Novak-Djokovic-bat-le-record-de-Rafael-Nadal-pour-la-scaled.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
             
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/Incredible 53-Shot Rally!  Novak Djokovic vs Alexander Zverev  2021 US Open - US Open Tennis Championships (720p, h264).mp4', true)">
-                <img src="./assets/images/Screenshot 2026-03-07 234830.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
+            
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/a2290f6eb23b2946c9d8c5043606f47c.jpg')">
                 <img src="./assets/images/a2290f6eb23b2946c9d8c5043606f47c.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
@@ -234,14 +136,7 @@
                 <img src="./assets/images/aad070afa7cb1dd974ee7a5ea3edf326.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
             
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/Top 10 Best ATP Doubles Rallies - Tennis TV (720p, h264).mp4', true)">
-                <img src="./assets/images/Screenshot 2026-03-07 225409.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
+            
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/826a573b212c2ae6e1f55006ac24a32b.jpg')">
                 <img src="./assets/images/826a573b212c2ae6e1f55006ac24a32b.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
@@ -251,14 +146,7 @@
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/ba324d688f77c47c2ab7b680cd87d66d.jpg')">
                 <img src="./assets/images/ba324d688f77c47c2ab7b680cd87d66d.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/One Of The Greatest Clay Court Rallies EVER Between Nadal & Djokovic! 😱 - Tennis TV (720p, h264).mp4', true)">
-                <img src="./assets/images/Screenshot 2026-03-07 230357.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
+            
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/d20463d385eeae674b3fdf66ea7aafc6.jpg')">
                 <img src="./assets/images/d20463d385eeae674b3fdf66ea7aafc6.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
@@ -269,14 +157,7 @@
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/federer-nadal-djokovic-1.webp')">
                 <img src="./assets/images/federer-nadal-djokovic-1.webp" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/Serena Williams' Stunning Drop Shot - Wimbledon (1080p, h264).mp4', true)">
-                <img src="./assets/images/Screenshot 2026-03-08 001713.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
+            
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/bd9568a0d3a4f3749399b011a781458f.jpg')">
                 <img src="./assets/images/bd9568a0d3a4f3749399b011a781458f.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
@@ -294,22 +175,7 @@
                 <img src="./assets/images/4ee933bba7579516ab5c0e04b7665dbb.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
 
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/Serena Williams hits PERFECT forehand! 🤩 - Australian Open (1080p, h264).mp4', true)">
-                <img src="./assets/images/04d629b67cf6e12e7a3aa76148b325e4.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/TERRIFIC tennis from Emma Raducanu! 😱 - Australian Open (720p, h264).mp4', true)">
-                <img src="./assets/images/5441fa5c16dad2606c705cbd54423472.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
+            
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/80ee44b405c474be94ec511cb58f2dfa.jpg')">
                 <img src="./assets/images/80ee44b405c474be94ec511cb58f2dfa.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
@@ -373,14 +239,7 @@
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/fa3a82925b05209814b61849b56d6926.jpg')">
                 <img src="./assets/images/fa3a82925b05209814b61849b56d6926.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('./assets/videos/Serena And Venus Williams' Best Wimbledon Shots - Wimbledon (1080P, H264).mp4', true)">
-                <img src="./assets/images/Screenshot 2026-03-07 234914.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
-                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-            </div>
+            
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/8f90985061ea1dab0aef3d131426bf2f.jpg')">
                 <img src="./assets/images/8f90985061ea1dab0aef3d131426bf2f.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
