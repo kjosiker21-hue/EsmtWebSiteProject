@@ -28,11 +28,16 @@
     <header>
         <nav class="navbar">
             <div class="logo">TENNIS<span>ART</span></div>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+           </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="hallofmasters.html">Hall of Masters</a></li>
-                <li><a href="tournaments.html" class="active">Tournaments</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="tournaments.html">Tournaments</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
                 <li><a href="contact.html">Soul</a></li>
             </ul>
         </nav>
@@ -42,8 +47,12 @@
         <div class="absolute inset-0 bg-gradient-to-b from-dark/40 via-dark/80 to-dark"></div>
         <div class="relative z-10 text-center">
             <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-4 text-white drop-shadow-2xl">
-                GALLERY <span class="text-volt">-</span> MÉDIA
+                VISUAL <span class="text-volt">-</span> POETRY
             </h1>
+            <p class="mt-6 text-gray-300 max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed drop-shadow-lg">
+                The sweat, the tears, the triumph. <br class="hidden md:block"> 
+                A curated collection of tennis's most breathtaking moments.
+            </p>
             <div class="w-20 h-1 bg-volt mx-auto rounded-full shadow-[0_0_15px_rgba(162,255,0,0.8)]"></div>
         </div>
     </section>
@@ -51,8 +60,9 @@
     <main class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-20 -mt-20">
         
         <div class="flex flex-wrap justify-center gap-4 mb-12" id="filter-container">
+            <button class="filter-btn active px-8 py-2.5 rounded-full border border-volt text-volt shadow-[0_0_15px_rgba(162,255,0,0.4)] font-bold text-sm uppercase tracking-widest transition-all duration-300" data-filter="all">ALL</button>
             <button class="filter-btn px-8 py-2.5 rounded-full border border-white/10 text-gray-400 hover:border-volt hover:text-volt hover:shadow-[0_0_15px_rgba(162,255,0,0.2)] font-bold text-sm uppercase tracking-widest transition-all duration-300" data-filter="photo">PHOTOS</button>
-    
+            <button class="filter-btn px-8 py-2.5 rounded-full border border-white/10 text-gray-400 hover:border-volt hover:text-volt hover:shadow-[0_0_15px_rgba(162,255,0,0.2)] font-bold text-sm uppercase tracking-widest transition-all duration-300" data-filter="video">VIDEOS</button>
         </div>
 
         <div class="masonry-grid" id="gallery-grid">
@@ -61,7 +71,15 @@
                 <img src="./assets/images/30b3f7a3886dd3b7487961270a55ca3f.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
 
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/19XaDs5cmSMBcD06306Ah5-g3Bszh8MuH/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-07 225239.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
+
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/01b1e529f8ab120194ee936505185112.jpg')">
                 <img src="./assets/images/01b1e529f8ab120194ee936505185112.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
@@ -69,47 +87,122 @@
              <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/05f07d6d6ae8c9407e1c2157e7b0f910.jpg')">
                 <img src="./assets/images/05f07d6d6ae8c9407e1c2157e7b0f910.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1OLrY-FugdQgX-MxvXBGxSpXkU2eEv0hp/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-06 235840.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/035561c73278befb9b172e8acc0a71a6.jpg')">
                 <img src="./assets/images/035561c73278befb9b172e8acc0a71a6.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1jUv5Ci6UC6l18J3LRbntkEUHc06pMf_4/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-07 230338.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/80781f762d6e4640b359b2e315885e87.jpg')">
-                <img src="./assets/images/80781f762d6e4640b359b2e315885e87.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+                <img src=
+                "./assets/images/80781f762d6e4640b359b2e315885e87.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
             
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/2e9e5e15a13e8b5288c9f08a0deabf80.jpg')">
                 <img src="./assets/images/2e9e5e15a13e8b5288c9f08a0deabf80.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/18JZ7F7c0zdQkfPHM9HJcY41WDSCJfj2G/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-06 235739.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/2d43f1e714842498935cf833519ca186.jpg')">
                 <img src="./assets/images/2d43f1e714842498935cf833519ca186.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/307bba08a62aaad027acd034325d8d82.jpg')">
                 <img src="./assets/images/307bba08a62aaad027acd034325d8d82.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1ccPAerzNKh8fRAWcEkTZv_tql-vZV_MG/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-07 231251.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/0e7c12125308d0da0c380e014110a2c9.jpg')">
                 <img src="./assets/images/0e7c12125308d0da0c380e014110a2c9.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/f_20250903_USO_GE301874_a.webp')">
                 <img src="./assets/images/f_20250903_USO_GE301874_a.webp" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1UgOHuSgiobrGqyLnt8M7fnCdF2q0x-Y9/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-07 231159.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/a503a768a332b484ad8c7fbb1e90afd5.jpg')">
                 <img src="./assets/images/a503a768a332b484ad8c7fbb1e90afd5.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/17eUJh5W59iB1xQVX5dZC7XnPodYuXbn2/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-07 232326.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/f35f3d433054b11ad97e950e0b2c6d0b.jpg')">
                 <img src="./assets/images/f35f3d433054b11ad97e950e0b2c6d0b.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-           
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/16tbAXFlC0zzqHGHgFlQWKAKrl-6bhJrs/preview', true)">
+                <img src="./assets/images/ab0dc6f7b8b10c3b095883589cbbab4a.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/a8b46b8bdf132bbcc61c585ea3eddaec.jpg')">
                 <img src="./assets/images/a8b46b8bdf132bbcc61c585ea3eddaec.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1kfOuTWW1KT9ZE4IMwVP_PsLzvMokSdAG/preview', true)">
+                <img src="./assets/images/novak-djokovic-steht-zum-13.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             
-            
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1JMpxY121dXEn--Jglic4Y3ClyiJiKukh/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-07 225329.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/4ea2125bd5fe318d3d49020ebe4ffc49.jpg')">
+                <img src="./assets/images/4ea2125bd5fe318d3d49020ebe4ffc49.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+            </div>
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1Tu4ssbM3_eEWR1guVj04Cr2UBtjfNKNI/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-07 234146.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/3370b16ef58dcda7a643ff681e8c34d7.jpg')">
                 <img src="./assets/images/3370b16ef58dcda7a643ff681e8c34d7.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
@@ -119,24 +212,59 @@
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/6661064605cc31fc19df07c909f76904.jpg')">
                 <img src="./assets/images/6661064605cc31fc19df07c909f76904.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1KrUHetRvJnjcJSLHFdhWejD76SWpZHbv/preview', true)">
+                <img src="./assets/images/80781f762d6e4640b359b2e315885e87.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/1742767759_Novak-Djokovic-bat-le-record-de-Rafael-Nadal-pour-la-scaled.jpg')">
                 <img src="./assets/images/1742767759_Novak-Djokovic-bat-le-record-de-Rafael-Nadal-pour-la-scaled.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
             
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/10lcagRvyywykaRWCHatO4ctYWuTsBReb/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-07 234830.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/a2290f6eb23b2946c9d8c5043606f47c.jpg')">
                 <img src="./assets/images/a2290f6eb23b2946c9d8c5043606f47c.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1FeUoLkQaUmJlx5PuXK6iSgah3iEVfFMR/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-07 235447.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/a56941c5499ba6379b18d53bcf525622.jpg')">
                 <img src="./assets/images/a56941c5499ba6379b18d53bcf525622.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/aad070afa7cb1dd974ee7a5ea3edf326.jpg')">
                 <img src="./assets/images/aad070afa7cb1dd974ee7a5ea3edf326.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1_9Ag6b6bWUWzqKOZ-7c0nTsviSEHCXv8/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-07 225307.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1R2rh545sIkt78y1fwbGwqvI2MiCRZA6s/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-07 225409.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/826a573b212c2ae6e1f55006ac24a32b.jpg')">
                 <img src="./assets/images/826a573b212c2ae6e1f55006ac24a32b.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
@@ -146,7 +274,7 @@
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/ba324d688f77c47c2ab7b680cd87d66d.jpg')">
                 <img src="./assets/images/ba324d688f77c47c2ab7b680cd87d66d.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            
+        
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/d20463d385eeae674b3fdf66ea7aafc6.jpg')">
                 <img src="./assets/images/d20463d385eeae674b3fdf66ea7aafc6.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
@@ -157,7 +285,14 @@
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/federer-nadal-djokovic-1.webp')">
                 <img src="./assets/images/federer-nadal-djokovic-1.webp" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1zsNDWvmTmOkyMpNg9FDLLgsV4jvB7lZA/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-08 001713.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/bd9568a0d3a4f3749399b011a781458f.jpg')">
                 <img src="./assets/images/bd9568a0d3a4f3749399b011a781458f.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
@@ -166,7 +301,14 @@
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/1a17376f6ad507b0ed370b09c76230a9.jpg')">
                 <img src="./assets/images/1a17376f6ad507b0ed370b09c76230a9.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1IDwRxVLaTHt-cqRYXPByGGaJo8yXZ1Gt/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-07 230357.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/1c9ea98ab19ebb0373addb63928e5bf6.jpg')">
                 <img src="./assets/images/1c9ea98ab19ebb0373addb63928e5bf6.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
@@ -175,7 +317,22 @@
                 <img src="./assets/images/4ee933bba7579516ab5c0e04b7665dbb.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
 
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1u-kIA58WABtdFH7BVg5dsiOXxf26n6X9/preview', true)">
+                <img src="./assets/images/04d629b67cf6e12e7a3aa76148b325e4.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1q2Y6bSV-u8QoPASOJ135kZlsUC5JB-AZ/preview', true)">
+                <img src="./assets/images/5441fa5c16dad2606c705cbd54423472.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/80ee44b405c474be94ec511cb58f2dfa.jpg')">
                 <img src="./assets/images/80ee44b405c474be94ec511cb58f2dfa.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
@@ -203,7 +360,14 @@
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/8944250839a9a1417d141abcdd1223b7.jpg')">
                 <img src="./assets/images/8944250839a9a1417d141abcdd1223b7.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1LTDG507rw3nr7LxzOw1qKtWN7K3tEkI4/preview', true)">
+                <img src="./assets/images/9f9c12e26c044f9852377f2ea1fa6f2e.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/98313f663af5bd6846dd94ca27c403d9.jpg')">
                 <img src="./assets/images/98313f663af5bd6846dd94ca27c403d9.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
@@ -220,7 +384,14 @@
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/c86e77fa5a8770829c83e9510c75b742.jpg')">
                 <img src="./assets/images/c86e77fa5a8770829c83e9510c75b742.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/1Jw9-FoxVYicLfKrkRBf8g6jsp1hYgswT/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-08 022801.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/4ea1bcbfdf02a64de2686b8e42c4e173.jpg')">
                 <img src="./assets/images/4ea1bcbfdf02a64de2686b8e42c4e173.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
@@ -239,7 +410,14 @@
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/fa3a82925b05209814b61849b56d6926.jpg')">
                 <img src="./assets/images/fa3a82925b05209814b61849b56d6926.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
-            
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="video" onclick="openModal('https://drive.google.com/file/d/19qTC07H2DKbGwNKx6IYLc7PD1NB61hPn/preview', true)">
+                <img src="./assets/images/Screenshot 2026-03-07 234914.jpg" class="w-full grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-14 h-14 bg-black/50 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] transform group-hover:scale-110 group-hover:bg-volt group-hover:text-dark transition-all duration-300 backdrop-blur-sm border border-white/20 group-hover:border-transparent">
+                        <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/8f90985061ea1dab0aef3d131426bf2f.jpg')">
                 <img src="./assets/images/8f90985061ea1dab0aef3d131426bf2f.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
@@ -255,10 +433,39 @@
             <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/2d92b4d5004a319cadc8fe75d11700a2.jpg')">
                 <img src="./assets/images/2d92b4d5004a319cadc8fe75d11700a2.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
             </div>
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/695deae3a36df9facfd2c38bacb9774a.jpg')">
+                <img src="./assets/images/695deae3a36df9facfd2c38bacb9774a.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+            </div>
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/def958dd9eadbdabdf5c628677cb4cfb.jpg')">
+                <img src="./assets/images/def958dd9eadbdabdf5c628677cb4cfb.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+            </div>
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/e42cd18a611cf3fa0bce61fb96311119.jpg')">
+                <img src="./assets/images/e42cd18a611cf3fa0bce61fb96311119.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+            </div>
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/bddedccc698d6fcb434c7beab1f583b1.jpg')">
+                <img src="./assets/images/bddedccc698d6fcb434c7beab1f583b1.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+            </div>
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/b29732882c9f57c78f0ae9d527d173a0.jpg')">
+                <img src="./assets/images/b29732882c9f57c78f0ae9d527d173a0.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+            </div>
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/60c6f08ade43f9e56a7d7aa23d979ed8.jpg')">
+                <img src="./assets/images/60c6f08ade43f9e56a7d7aa23d979ed8.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+            </div>
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/27e7b74d0a10bc4b1c48c40782223298.jpg')">
+                <img src="./assets/images/27e7b74d0a10bc4b1c48c40782223298.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+            </div>
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/024-4809904-677cfa9e56982037299896.jpg')">
+                <img src="./assets/images/024-4809904-677cfa9e56982037299896.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+            </div>
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/09a3cc57c2efc7d721d3b53bec22d8c5.jpg')">
+                <img src="./assets/images/09a3cc57c2efc7d721d3b53bec22d8c5.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+            </div>
+            <div class="masonry-item gallery-item group relative rounded-xl overflow-hidden cursor-pointer bg-dark border border-white/5" data-category="photo" onclick="openModal('./assets/images/5d252a7b486362af2d8124f5c74189c1.jpg')">
+                <img src="./assets/images/5d252a7b486362af2d8124f5c74189c1.jpg" class="w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+            </div>
         </div>
     </main>
-
-    <div id="media-modal" class="fixed inset-0 z-[100] bg-dark/95 backdrop-blur-xl hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
+    <div id="media-modal" class="fixed inset-0 z-[1100] bg-dark/95 backdrop-blur-xl hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
         <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors z-50">
             <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
@@ -317,9 +524,11 @@
 
             if (isVideo) {
                 modalWrapper.innerHTML = `
-                    <video class="w-full h-auto max-h-[85vh] rounded-2xl shadow-2xl border-2 border-volt shadow-[0_0_40px_rgba(162,255,0,0.3)]" controls autoplay>
-                        <source src="${mediaSrc}" type="video/mp4">
-                    </video>`;
+                    <iframe src="${mediaSrc}" 
+                        class="w-full aspect-video max-h-[85vh] rounded-2xl shadow-2xl border-2 border-volt shadow-[0_0_40px_rgba(162,255,0,0.3)]" 
+                        allow="autoplay" 
+                        allowfullscreen>
+                    </iframe>`;
             } else {
                 modalWrapper.innerHTML = `
                     <img src="${mediaSrc}" class="max-w-full max-h-[90vh] object-contain rounded-xl shadow-2xl border border-volt shadow-[0_0_40px_rgba(162,255,0,0.3)]">`;
@@ -340,6 +549,19 @@
         modal.addEventListener('click', (e) => { 
             if (e.target === modal) closeModal(); 
         });
+    </script>
+    <script>
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+
+        
+        if (burger && navLinks) {
+            burger.addEventListener('click', () => {
+                
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('toggle');
+            });
+        }
     </script>
 </body>
 </html>

@@ -254,16 +254,48 @@ footer p {
     gap: 25px;
 }
 
+
+
+
+
+
 .legend-card {
-    position: relative;
-    background: #111;
-    border-radius: 15px;
-    border: 1px solid rgba(255,255,255,0.08);
-    overflow: hidden;
-    aspect-ratio: 3 / 4; 
+    background-color: transparent;
+    aspect-ratio: 3 / 4;
+    perspective: 1000px; 
     cursor: pointer;
-    transition: all 0.4s ease;
+}
+
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    transform-style: preserve-3d; 
+}
+
+
+.legend-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;         
+    border-radius: 15px;
+    overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+
+.card-front {
+    background: #111;
 }
 
 .card-image {
@@ -271,16 +303,15 @@ footer p {
     inset: 0;
     background-size: cover;
     background-position: center top;
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.legend-card::after {
+
+.card-front::after {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 40%, transparent 100%);
     pointer-events: none;
-    transition: opacity 0.4s ease;
 }
 
 .flag {
@@ -306,46 +337,27 @@ footer p {
     z-index: 2;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: bottom 0.4s ease, opacity 0.4s ease;
 }
 
-.slide-up-reveal {
-    position: absolute;
-    inset: 0;
-    background: rgba(10, 12, 16, 0.92);
-    backdrop-filter: blur(8px);
-    z-index: 3;
+
+.card-back {
+    background: rgba(10, 12, 16, 0.98);
+    transform: rotateY(180deg); 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 30px 20px;
-    text-align: center;
-    transform: translateY(100%); 
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.legend-card:hover .slide-up-reveal {
-    transform: translateY(0);
-}
 
-.legend-card:hover {
-    border-color: var(--volt);
+.legend-card:hover .card-back {
+    border-color: var(--volt, #a2ff00);
     box-shadow: 0 15px 35px rgba(162, 255, 0, 0.15);
-    transform: translateY(-8px);
 }
 
-.legend-card:hover .card-image {
-    transform: scale(1.08);
-}
-
-.legend-card:hover .player-name {
-    opacity: 0;
-    bottom: -20px;
-}
-
-.slide-up-reveal h4 {
-    color: var(--volt);
+.card-back h4 {
+    color: var(--volt, #a2ff00);
     font-size: 1.1rem;
     font-weight: 900;
     margin-bottom: 15px;
@@ -364,7 +376,7 @@ footer p {
     color: #f0f0f0;
     line-height: 1.5;
     margin-bottom: 15px;
-    border-left: 2px solid var(--volt);
+    border-left: 2px solid var(--volt, #a2ff00);
     padding-left: 10px;
 }
 
@@ -580,7 +592,7 @@ footer p {
     z-index: 10;
 }
 
-/* --- MODIFICATION ICI : Uniquement pour les images (plus de 'video') --- */
+
 .gallery-item img {
     transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -588,7 +600,7 @@ footer p {
 .gallery-item:hover img {
     transform: scale(1.08);
 }
-/* ---------------------------------------------------------------------- */
+
 
 .hero-parallax {
     background-attachment: fixed;
@@ -707,4 +719,64 @@ footer p {
 
 @media (max-width: 768px) {
     .footer-grid { grid-template-columns: 1fr; }
+}
+
+h1 {
+    font-size: 80px;
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px; 
+        line-height: 1.1; 
+    }
+    
+    .nav-links {
+        display: none; 
+    }
+}
+
+.burger {
+    display: none; 
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background-color: #a2ff00; 
+    border-radius: 2px;
+}
+
+
+@media (max-width: 768px) {
+    .burger {
+        display: flex; 
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 70px; 
+        right: 0;
+        width: 100%;
+        background-color: #0a0a0a;
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 2px solid #a2ff00;
+        z-index: 1000;
+    }
+
+    
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
 }

@@ -12,7 +12,12 @@
     <header>
         <nav class="navbar">
             <div class="logo">TENNIS<span>ART</span></div>
-            <ul class="nav-links">
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+           </div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="hallofmasters.html">Hall of Masters</a></li>
                 <li><a href="tournaments.html">Tournaments</a></li>
@@ -98,7 +103,7 @@
                 <h4>Connect</h4>
                 <div class="social-icons">
                     <a href="#">LinkedIn</a>
-                    <a href="#">Twitter</a>
+                    <a href="#">X</a>
                     <a href="#">Instagram</a>
                 </div>
             </div>
@@ -107,6 +112,20 @@
             <p>&copy; 2026 Josias - ESMT Dakar LTI 1B Project</p>
         </div>
     </footer>
+   <script>
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+
+        
+        if (burger && navLinks) {
+            burger.addEventListener('click', () => {
+                
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('toggle');
+            });
+        }
+    </script>
+
     
 </body>
 </html>

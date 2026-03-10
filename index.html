@@ -14,7 +14,11 @@
     <header>
         <nav class="navbar">
             <div class="logo">TENNIS<span>ART</span></div>
-            
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+           </div>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="hallofmasters.html">Hall of Masters</a></li>
@@ -49,7 +53,7 @@
                     <p>Tennis is a series of high-stakes trajectories and probabilities.</p>
                 </div>
                 <div class="phil-image">
-                    <img src="./assets/images/AdobeStock_70058017.webp" alt="Detail of a Tennis Ball">
+                    <img src="./assets/images/AdobeStock_70058017.jpg" alt="Detail of a Tennis Ball">
                 </div>
             </div>
         </div>
@@ -59,6 +63,19 @@
         <p>&copy; 2026 | Designed by <strong>Josias</strong></p>
         <p>Student at ESMT Dakar - LTI 1B Project</p>
     </footer>
+    <script>
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+
+        
+        if (burger && navLinks) {
+            burger.addEventListener('click', () => {
+                
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('toggle');
+            });
+        }
+    </script>
 
 </body>
 </html>
