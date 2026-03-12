@@ -1076,4 +1076,26 @@ footer p {
         padding-left: 20px;
         padding-right: 20px;
     }
+    .burger {
+        display: flex !important; 
+        z-index: 2000; 
+    }
+    
+    .burger span {
+        background-color: var(--volt) !important; 
+    }
+    .editorial-grid .phil-image img, .rules-hero img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; 
+    }
+    .page-bg-visual {
+        background-attachment: scroll; 
+        background-size: cover; 
+        background-position: center center;
+        height: 100vh; 
+        position: fixed; 
+        width: 100%;
+        z-index: -1;
+    }
 }
