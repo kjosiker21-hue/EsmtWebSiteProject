@@ -16,7 +16,7 @@
 <body class="rules-page">
 
     <header>
-        <nav class="navbar">
+       <nav class="navbar">
             <div class="logo">TENNIS<span>ART</span></div>
             <div class="burger" id="burger">
                 <span></span>
@@ -29,7 +29,7 @@
                 <li><a href="hallofmasters.html">Hall of Masters</a></li>
                 <li><a href="tournaments.html">Tournaments</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html">Soul</a></li>
             </ul>
         </nav>
     </header>
@@ -168,17 +168,6 @@
     </footer>
 
     <script>
-        const burger = document.getElementById('burger');
-        const navLinks = document.getElementById('nav-links');
-
-        
-        if (burger && navLinks) {
-            burger.addEventListener('click', () => {
-                
-                navLinks.classList.toggle('active');
-                burger.classList.toggle('toggle');
-            });
-        }
 
         const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
         const observer = new IntersectionObserver((entries, observer) => {
@@ -207,6 +196,19 @@
                 card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
             });
         });
+    </script>
+    <script>
+         const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+
+        
+        if (burger && navLinks) {
+            burger.addEventListener('click', () => {
+                
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('toggle');
+            });
+        }
     </script>
 </body>
 </html>
