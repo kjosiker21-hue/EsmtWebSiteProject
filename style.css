@@ -1056,12 +1056,6 @@ footer p {
     
 
     
-    .soul-page {
-       
-        background-attachment: scroll; 
-        background-position: center top; 
-    }
-
     
     .level-1, 
     .level-2, 
@@ -1089,13 +1083,5 @@ footer p {
         height: auto;
         object-fit: contain; 
     }
-    .page-bg-visual {
-        background-attachment: scroll; 
-        background-size: cover; 
-        background-position: center center;
-        height: 100vh; 
-        position: fixed; 
-        width: 100%;
-        z-index: -1;
-    }
+    
 }
